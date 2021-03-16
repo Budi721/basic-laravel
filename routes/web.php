@@ -22,6 +22,6 @@ Route::get('/home', function () {
     echo "This is Home Page";
 });
 
-Route::get('/about', [AboutController::class, 'index'])->middleware('check');
+Route::get('/about', [AboutController::class, 'index']);
 
-Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index'])->name('con');
